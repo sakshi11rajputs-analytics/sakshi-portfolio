@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sakshi Rajput | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* --------- GLOBAL STYLES --------- */
+    :root {
+      --bg-main: #f3f4f6;         /* soft grey background */
+      --bg-card: #ffffff;        /* white cards */
+      --text-main: #0f172a;      /* dark navy text */
+      --text-muted: #6b7280;     /* muted grey text */
+      --accent: #2563eb;         /* bold blue */
+      --accent-soft: #dbeafe;    /* light blue background */
+      --border-soft: #e5e7eb;    /* light border */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      background: var(--bg-main);
+      color: var(--text-main);
+      padding: 24px;
+    }
+
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    /* --------- HERO SECTION (placeholder for now) --------- */
+
+    .hero {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+      margin-bottom: 28px;
+    }
+
+    .hero-title {
+      font-size: 1.9rem;
+      margin-bottom: 4px;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-tagline {
+      font-style: italic;
+      margin-bottom: 16px;
+      color: var(--text-muted);
+    }
+
+    .hero-about {
+      text-align: justify;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .hero-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      font-size: 0.9rem;
+    }
+
+    .hero-contact span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+    }
+
+    .hero-contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .hero-contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* --------- MAIN LAYOUT (BOXES + CONTENT) --------- */
+
+    .layout {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .nav-boxes {
+      flex: 0 0 22%;
+      max-width: 260px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .nav-heading {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .nav-box {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--border-soft);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: 0 8px 16px rgba(15, 23, 42, 0.04);
+      transition: all 0.18s ease-in-out;
+      text-align: left;
+    }
+
+    .nav-box-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-box-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .nav-box:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.18);
+      background: var(--accent-soft);
+    }
+
+    .nav-box.active {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    /* --------- CONTENT PANELS --------- */
+
+    .content-panels {
+      flex: 1;
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 20px 22px;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+      min-height: 260px;
+    }
+
+    .panel {
+      display: none;
+    }
+
+    .panel.active {
+      display: block;
+    }
+
+    .panel h2 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .panel p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+    }
+
+    .panel-placeholder {
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 10px;
+      background: #f9fafb;
+      border: 1px dashed var(--border-soft);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* --------- RESPONSIVE --------- */
+
+    @media (max-width: 800px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .nav-boxes {
+        flex: none;
+        max-width: 100%;
+      }
+
+      .content-panels {
+        padding: 16px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- HERO SECTION (you will customise the text later) -->
+   <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
+
+  <!-- LEFT SIDE (TEXT) -->
+  <div style="flex: 1; min-width: 280px;">
+    <h1 class="hero-title">Sakshi Rajput</h1>
+
+    <p class="hero-subtitle">
+      Finance & Research Data Analyst · Financial Analysis · Consulting ·
+      Strategy & Insights · Onboarding Risk & FinTech · Research & Finance Roles · ex-Escalent
+    </p>
+
+    <p class="hero-tagline">
+      Bridging finance, data, and research to support smarter, safer business decisions.
+    </p>
+
+    <p class="hero-about">
+      I’m a Finance & Research Data Analyst with a strong foundation in financial operations,
+      data analysis, consulting, and business insights. Currently based in the UK, I hold an MSc in Business
+      Analytics and have hands-on experience in research analysis, stakeholder engagement, and financial crime/AML-related analytics.
+      <br><br>
+      I’m passionate about understanding how financial systems work, how data drives important business decisions,
+      and how technology can make transactions safer and more efficient. My long-term goal is to build a strong
+      career in a finance, research, or analytics role — where I can learn, grow, and contribute meaningfully.
+    </p>
+
+    <div class="hero-contact">
+      <span>📧 <a href="mailto:your.email@example.com">your.email@example.com</a></span>
+      <span>🔗 <a href="YOUR-LINKEDIN-URL" target="_blank">LinkedIn</a></span>
+      <span>💻 <a href="https://github.com/sakshi11rajputs-analytics" target="_blank">GitHub</a></span>
+      <span>📍 Based in the UK</span>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE (IMAGE) -->
+  <div style="flex: 0 0 290px; text-align: center;">
+    <img src="sakshi_image.jpg" alt="Sakshi at Barclays Media Centre, Lord's"
+      style="width: 100%; border-radius: 14px; box-shadow: 0 10px 22px rgba(0,0,0,0.18);" />
+  </div>
+
+</div>
+
+    <!-- MAIN LAYOUT: BOXES + CONTENT -->
+    <section class="layout">
+      <!-- LEFT: NAV BOXES -->
+      <aside class="nav-boxes">
+        <div class="nav-heading">Explore</div>
+
+        <div class="nav-box active" data-target="projects">
+          <div class="nav-box-title">📊 Projects</div>
+          <div class="nav-box-desc">Data, finance and analytics work.</div>
+        </div>
+
+        <div class="nav-box" data-target="experience">
+          <div class="nav-box-title">💼 Experience</div>
+          <div class="nav-box-desc">Roles, responsibilities &amp; impact.</div>
+        </div>
+
+        <div class="nav-box" data-target="education">
+          <div class="nav-box-title">🎓 Education</div>
+          <div class="nav-box-desc">Academic background &amp; key modules.</div>
+        </div>
+
+        <div class="nav-box" data-target="contact">
+          <div class="nav-box-title">📬 Contact</div>
+          <div class="nav-box-desc">How to reach out for opportunities.</div>
+        </div>
+
+        <div class="nav-box" data-target="fun">
+          <div class="nav-box-title">✨ Beyond Work</div>
+          <div class="nav-box-desc">Interests, hobbies &amp; personality.</div>
+        </div>
+      </aside>
+
+      <!-- RIGHT: CONTENT PANELS -->
+      <section class="content-panels">
+        <!-- Projects Panel -->
+        <div id="projects" class="panel active">
+          <h2>Projects</h2>
+          <p>
+            This is where your project cards will go later (e.g. AML model,
+            digital banking dashboard, sentiment analysis, etc.).
+          </p>
+          <div class="panel-placeholder">
+            🛠️ Placeholder: Once your projects are ready, we’ll add
+            separate cards here with titles, short descriptions and links to
+            your GitHub or Power BI dashboards.
+          </div>
+        </div>
+
+        <!-- Experience Panel -->
+        <div id="experience" class="panel">
+          <h2>Experience</h2>
+          <p>
+            This section will show your key roles (Escalent, research roles,
+            retail experience, etc.) with bullet points focused on impact.
+          </p>
+          <div class="panel-placeholder">
+            💼 Placeholder: later we’ll add role titles, companies, dates and
+            2–3 bullets each, written for finance / consulting / analytics roles.
+          </div>
+        </div>
+
+        <!-- Education Panel -->
+        <div id="education" class="panel">
+          <h2>Education</h2>
+          <p>
+            Here you’ll highlight your MSc in Business Analytics, MBA in
+            Finance &amp; International Business, and any key modules or
+            achievements.
+          </p>
+          <div class="panel-placeholder">
+            🎓 Placeholder: we can also add important coursework like
+            machine learning, financial analytics, simulation, etc.
+          </div>
+        </div>
+
+        <!-- Contact Panel -->
+        <div id="contact" class="panel">
+          <h2>Contact</h2>
+          <p>
+            A dedicated section to make it easy for recruiters and hiring
+            managers to get in touch.
+          </p>
+          <div class="panel-placeholder">
+            📬 Placeholder: we can add a short note, your preferred email,
+            LinkedIn link, and a line about the kind of roles you’re open to.
+          </div>
+        </div>
+
+        <!-- Fun / Beyond Work Panel -->
+        <div id="fun" class="panel">
+          <h2>Beyond Work</h2>
+          <p>
+            A space to show a bit of personality – art, travel, sports, your
+            interest in Egyptian history, etc.
+          </p>
+          <div class="panel-placeholder">
+            ✨ Placeholder: later we can add 3–4 short lines about your hobbies
+            to keep this section light but professional.
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+
+  <!-- SIMPLE JS TO SWITCH PANELS -->
+  <script>
+    const navBoxes = document.querySelectorAll(".nav-box");
+    const panels = document.querySelectorAll(".panel");
+
+    navBoxes.forEach((box) => {
+      box.addEventListener("click", () => {
+        // update active nav box
+        navBoxes.forEach((b) => b.classList.remove("active"));
+        box.classList.add("active");
+
+        // show matching panel
+        const targetId = box.getAttribute("data-target");
+        panels.forEach((panel) => {
+          panel.classList.toggle("active", panel.id === targetId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
