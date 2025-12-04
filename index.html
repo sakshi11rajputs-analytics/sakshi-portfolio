@@ -22,16 +22,16 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
     }
 
     body {
-      front-family: 'Inter', sans-serif;
-      background: #E9E1D6;   /* pick your colour */
-      color: #0f172a;        /* keep your text colour */
+      font-family: 'Inter', sans-serif;
+      background: #E9E1D6;
+      color: #0f172a;
       margin: 0;
-      padding: 24px; 
+      padding: 24px;
     }
 
     .page-wrapper {
@@ -47,15 +47,7 @@
       line-height: 1.6;
     }
 
-    /* --------- HERO SECTION (placeholder for now) --------- */
-
-    .hero {
-      background: var(--bg-card);
-      border-radius: 16px;
-      padding: 24px 28px;
-      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
-      margin-bottom: 28px;
-    }
+    /* --------- HERO SECTION --------- */
 
     .hero-title {
       font-size: 1.9rem;
@@ -205,6 +197,34 @@
       color: var(--text-muted);
     }
 
+    /* --------- EXPERIENCE STYLING --------- */
+
+    .role {
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .role h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .years {
+      color: #6b7280;
+      margin: 6px 0 10px;
+      font-size: 0.85rem;
+    }
+
+    .role ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
     /* --------- RESPONSIVE --------- */
 
     @media (max-width: 800px) {
@@ -225,47 +245,47 @@
 </head>
 <body>
   <div class="page-wrapper">
-    <!-- HERO SECTION (you will customise the text later) -->
-   <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
+    <!-- HERO: TEXT + IMAGE -->
+    <div style="display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;">
 
-  <!-- LEFT SIDE (TEXT) -->
-  <div style="flex: 1; min-width: 280px;">
-    <h1 class="hero-title">Sakshi Rajput</h1>
+      <!-- LEFT SIDE (TEXT) -->
+      <div style="flex: 1; min-width: 280px;">
+        <h1 class="hero-title">Sakshi Rajput</h1>
 
-    <p class="hero-subtitle">
-      Finance & Research Data Analyst · Financial Analysis · Consulting ·
-      Strategy & Insights · Onboarding Risk & FinTech · Research & Finance Roles · ex-Escalent
-    </p>
+        <p class="hero-subtitle">
+          Finance & Research Data Analyst · Financial Analysis · Consulting ·
+          Strategy & Insights · Onboarding Risk & FinTech · Research & Finance Roles · ex-Escalent
+        </p>
 
-    <p class="hero-tagline">
-      Bridging finance, data, and research to support smarter, safer business decisions.
-    </p>
+        <p class="hero-tagline">
+          Bridging finance, data, and research to support smarter, safer business decisions.
+        </p>
 
-    <p class="hero-about">
-      I’m a Finance & Research Data Analyst with a strong foundation in financial operations,
-      data analysis, consulting, and business insights. Currently based in the UK, I hold an MSc in Business
-      Analytics and have hands-on experience in research analysis, stakeholder engagement, and financial crime/AML-related analytics.
-      <br><br>
-      I’m passionate about understanding how financial systems work, how data drives important business decisions,
-      and how technology can make transactions safer and more efficient. My long-term goal is to build a strong
-      career in a finance, research, or analytics role — where I can learn, grow, and contribute meaningfully.
-    </p>
+        <p class="hero-about">
+          I’m a Finance & Research Data Analyst with a strong foundation in financial operations,
+          data analysis, consulting, and business insights. Currently based in the UK, I hold an MSc in Business
+          Analytics and have hands-on experience in research analysis, stakeholder engagement, and financial crime/AML-related analytics.
+          <br><br>
+          I’m passionate about understanding how financial systems work, how data drives important business decisions,
+          and how technology can make transactions safer and more efficient. My long-term goal is to build a strong
+          career in a finance, research, or analytics role — where I can learn, grow, and contribute meaningfully.
+        </p>
 
-    <div class="hero-contact">
-      <span>📧 <a href="mailto:your.email@example.com">sakshi11rajputs@gmail.com</a></span>
-      <span>🔗 <a href="https://www.linkedin.com/in/sakshirajput11/" target="_blank">LinkedIn</a></span>
-      <span>💻 <a href="https://github.com/sakshi11rajputs-analytics" target="_blank">GitHub</a></span>
-      <span>📍 Based in the UK</span>
+        <div class="hero-contact">
+          <span>📧 <a href="mailto:sakshi11rajputs@gmail.com">sakshi11rajputs@gmail.com</a></span>
+          <span>🔗 <a href="https://www.linkedin.com/in/sakshirajput11/" target="_blank">LinkedIn</a></span>
+          <span>💻 <a href="https://github.com/sakshi11rajputs-analytics" target="_blank">GitHub</a></span>
+          <span>📍 Based in the UK</span>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE (IMAGE) -->
+      <div style="flex: 0 0 290px; text-align: center;">
+        <img src="sakshi_image.JPG" alt="Sakshi at Barclays Media Centre, Lord's"
+             style="width: 100%; border-radius: 14px; box-shadow: 0 10px 22px rgba(0,0,0,0.18);" />
+      </div>
+
     </div>
-  </div>
-
-  <!-- RIGHT SIDE (IMAGE) -->
-  <div style="flex: 0 0 290px; text-align: center;">
-    <img src="sakshi_image.JPG" alt="Sakshi at Barclays Media Centre, Lord's"
-      style="width: 100%; border-radius: 14px; box-shadow: 0 10px 22px rgba(0,0,0,0.18);" />
-  </div>
-
-</div>
 
     <!-- MAIN LAYOUT: BOXES + CONTENT -->
     <section class="layout">
@@ -278,61 +298,10 @@
           <div class="nav-box-desc">Data, finance and analytics work.</div>
         </div>
 
-        <div id="experience" class="content-panel">
-    <h2>Experience</h2>
-
-    <!-- Analyst -->
-    <div class="role">
-        <h3>Analyst — Financial Operations & Client Insights (Escalent)</h3>
-        <p class="years">2023–2024</p>
-        <ul>
-            <li>Managed end-to-end financial operations including purchase orders, invoices, budgeting, spend tracking and audit readiness for a major global program.</li>
-            <li>Reviewed and validated 100+ contracts, POs and invoices monthly, ensuring accuracy and compliance.</li>
-            <li>Collaborated with senior stakeholders across global regions through independent client calls and project review meetings.</li>
-            <li>Supported forecasting, spend optimisation and multi-region reporting through detailed financial analysis.</li>
-        </ul>
-    </div>
-
-    <!-- Management Trainee -->
-    <div class="role">
-        <h3>Management Trainee — Research & Insights (Escalent)</h3>
-        <p class="years">2022–2023</p>
-        <ul>
-            <li>Performed secondary research across US, UK, Europe, APAC and Middle Eastern markets for telecom, tourism, consumer goods and technology sectors.</li>
-            <li>Analysed annual reports, proxy statements, consulting publications (Accenture, IBM, Deloitte) and global sources including IMF, World Bank and WEF.</li>
-            <li>Executed account insights research by mapping prospective customers and identifying service opportunities for enterprise clients.</li>
-            <li>Transcribed and analysed 40+ long-form expert interviews (45–60 minutes) across 8–10 Middle Eastern countries.</li>
-            <li>Synthesised insights into structured client-ready research decks for senior managers.</li>
-        </ul>
-    </div>
-
-    <!-- Research Associate -->
-    <div class="role">
-        <h3>Research Associate — Global Insights (Phronesis Partners)</h3>
-        <p class="years">2021–2022</p>
-        <ul>
-            <li>Conducted 40–50 in-depth interviews with industry professionals and senior leaders across healthcare, IT and finance sectors.</li>
-            <li>Performed secondary research using LinkedIn Navigator, ZoomInfo, Hoover’s and specialist databases.</li>
-            <li>Prepared structured research summaries, insights decks and client reports.</li>
-        </ul>
-    </div>
-
-
-    <h2 style="margin-top: 32px;">Other Experience</h2>
-
-    <!-- Pharmacy Colleague -->
-    <div class="role">
-        <h3>Pharmacy Colleague — ASDA Pharmacy (UK)</h3>
-        <p class="years">2024–Present</p>
-        <ul>
-            <li>Process 80–120 NHS and private prescriptions daily with high accuracy and regulatory compliance.</li>
-            <li>Support pharmacists and dispensers with stock management, expiry audits, workflow coordination and daily operations.</li>
-            <li>Assist 100+ patients per day with OTC advice, queries and product recommendations.</li>
-            <li>Handle till transactions, prescription handovers and patient enquiries in a fast-paced environment.</li>
-        </ul>
-    </div>
-
-</div>
+        <div class="nav-box" data-target="experience">
+          <div class="nav-box-title">💼 Work Experience</div>
+          <div class="nav-box-desc">Research, finance & other roles.</div>
+        </div>
 
         <div class="nav-box" data-target="education">
           <div class="nav-box-title">🎓 Education</div>
@@ -368,14 +337,56 @@
 
         <!-- Experience Panel -->
         <div id="experience" class="panel">
-          <h2>Experience</h2>
-          <p>
-            This section will show your key roles (Escalent, research roles,
-            retail experience, etc.) with bullet points focused on impact.
-          </p>
-          <div class="panel-placeholder">
-            💼 Placeholder: later we’ll add role titles, companies, dates and
-            2–3 bullets each, written for finance / consulting / analytics roles.
+          <h2>Work Experience</h2>
+
+          <!-- Analyst -->
+          <div class="role">
+            <h3>Analyst — Financial Operations &amp; Client Insights (Escalent)</h3>
+            <p class="years">2023–2024</p>
+            <ul>
+              <li>Managed end-to-end financial operations including purchase orders, invoices, budgeting, spend tracking and audit readiness for a major global program.</li>
+              <li>Reviewed and validated 100+ contracts, POs and invoices monthly, ensuring accuracy and compliance.</li>
+              <li>Collaborated with senior stakeholders across global regions through independent client calls and project review meetings.</li>
+              <li>Supported forecasting, spend optimisation and multi-region reporting through detailed financial analysis.</li>
+            </ul>
+          </div>
+
+          <!-- Management Trainee -->
+          <div class="role">
+            <h3>Management Trainee — Research &amp; Insights (Escalent)</h3>
+            <p class="years">2022–2023</p>
+            <ul>
+              <li>Performed secondary research across US, UK, Europe, APAC and Middle Eastern markets for telecom, tourism, consumer goods and technology sectors.</li>
+              <li>Analysed annual reports, proxy statements, consulting publications (Accenture, IBM, Deloitte) and global sources including IMF, World Bank and WEF.</li>
+              <li>Executed account insights research by mapping prospective customers and identifying service opportunities for enterprise clients.</li>
+              <li>Transcribed and analysed 40+ long-form expert interviews (45–60 minutes) across 8–10 Middle Eastern countries.</li>
+              <li>Synthesised insights into structured client-ready research decks for senior managers.</li>
+            </ul>
+          </div>
+
+          <!-- Research Associate -->
+          <div class="role">
+            <h3>Research Associate — Global Insights (Phronesis Partners)</h3>
+            <p class="years">2021–2022</p>
+            <ul>
+              <li>Conducted 40–50 in-depth interviews with industry professionals and senior leaders across healthcare, IT and finance sectors.</li>
+              <li>Performed secondary research using LinkedIn Navigator, ZoomInfo, Hoover’s and specialist databases.</li>
+              <li>Prepared structured research summaries, insights decks and client reports.</li>
+            </ul>
+          </div>
+
+          <h2 style="margin-top: 32px;">Other Experience</h2>
+
+          <!-- Pharmacy Colleague -->
+          <div class="role">
+            <h3>Pharmacy Colleague — ASDA Pharmacy (UK)</h3>
+            <p class="years">2024–Present</p>
+            <ul>
+              <li>Process 80–120 NHS and private prescriptions daily with high accuracy and regulatory compliance.</li>
+              <li>Support pharmacists and dispensers with stock management, expiry audits, workflow coordination and daily operations.</li>
+              <li>Assist 100+ patients per day with OTC advice, queries and product recommendations.</li>
+              <li>Handle till transactions, prescription handovers and patient enquiries in a fast-paced environment.</li>
+            </ul>
           </div>
         </div>
 
